@@ -33,18 +33,16 @@ wyra¿eniami.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-gzip -9nf src/*.1 samples/*.1 src/{CHANGES,EXAMPLES,FAQ,README*}
-
 install bin/akanga $RPM_BUILD_ROOT%{_bindir}
 
-install src/*.1.gz $RPM_BUILD_ROOT%{_mandir}/man1/
-install samples/*.1.gz $RPM_BUILD_ROOT%{_mandir}/man1
+install src/*.1 $RPM_BUILD_ROOT%{_mandir}/man1
+install samples/*.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc src/{CHANGES,EXAMPLES,FAQ,README*}.gz samples/{fileuser,lp,man2html,man2html.cgi,mancc,netuser,which}
+%doc src/{CHANGES,EXAMPLES,FAQ,README*} samples/{fileuser,lp,man2html,man2html.cgi,mancc,netuser,which}
 %attr(755,root,root) %{_bindir}/akanga
-%attr(644,root,root) %{_mandir}/man1/*.gz
+%attr(644,root,root) %{_mandir}/man1/*
