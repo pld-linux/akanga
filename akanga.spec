@@ -1,16 +1,16 @@
-Summary:		Akanga shell
-Summary(pl):	Akanga shell
-Name:			akanga
-Version:		1.0.7
-Release:		2
-License:		GPL
-Group:			Applications/Shells
-Source0:		ftp://metalab.unc.edu/pub/Linux/system/shells/%{name}-%{version}.tar.gz
-Patch0:			%{name}-config.patch
-Patch1:			%{name}-opt.patch
-Patch2:			%{name}-va_copy.patch
+Summary:	Akanga shell
+Summary(pl):	Pow³oka Akanga
+Name:		akanga
+Version:	1.0.7
+Release:	3
+License:	GPL
+Group:		Applications/Shells
+Source0:	ftp://metalab.unc.edu/pub/Linux/system/shells/%{name}-%{version}.tar.gz
+Patch0:		%{name}-config.patch
+Patch1:		%{name}-opt.patch
+Patch2:		%{name}-va_copy.patch
 BuildRequires:	ctags
-BuildRoot:		%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_bindir		/bin
 
@@ -19,8 +19,8 @@ Rc based shell with additions for file locking, temporary files,
 reading standard input, expr and let builtin.
 
 %description -l pl
-Prosta pow³oka z blokowaniem plików, plikami tymczasowymi i
-wyra¿eniami.
+Prosta pow³oka z dodatkami do blokowania plików, plików tymczasowych,
+czytania standardowego wej¶cia oraz wbudowanymi expr i let.
 
 %prep
 %setup -q
@@ -29,7 +29,7 @@ wyra¿eniami.
 %patch2 -p1
 
 %build
-%{__make}
+%{__make} OPTFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
