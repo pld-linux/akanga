@@ -10,8 +10,7 @@ Patch0:		%{name}-config.patch
 Patch1:		%{name}-opt.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define	_prefix	/
-%define	_mandir	/usr/share/man
+%define		_bindir		/bin
 
 %description
 Rc based shell with additions for file locking, temporary files,
@@ -45,4 +44,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc src/{CHANGES,EXAMPLES,FAQ,README*} samples/{fileuser,lp,man2html,man2html.cgi,mancc,netuser,which}
 %attr(755,root,root) %{_bindir}/akanga
-%attr(644,root,root) %{_mandir}/man1/*
+%{_mandir}/man1/*
