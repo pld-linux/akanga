@@ -1,12 +1,12 @@
 Summary:	Akanga shell
 Summary(pl):	Pow³oka Akanga
 Name:		akanga
-Version:	1.0.7
-Release:	3
+Version:	1.0.21
+Release:	1
 License:	GPL
 Group:		Applications/Shells
-Source0:	ftp://metalab.unc.edu/pub/Linux/system/shells/%{name}-%{version}.tar.gz
-# Source0-md5:	591a202a5097d79a43a155ffc2fbb3b5
+Source0:	http://www.ibiblio.org/pub/linux/system/shells/%{name}-%{version}.tar.gz
+# Source0-md5:	2b9d823323921f1a525622c52a3bd7bb
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-opt.patch
 Patch2:		%{name}-va_copy.patch
