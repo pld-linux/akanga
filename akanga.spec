@@ -4,8 +4,9 @@ Name:		akanga
 Version:	1.0.7
 Release:	1
 License:	GPL
-Group:		Shells
-Group(pl):	Pow³oki
+Group:		Applications/Shells
+Group(de):	Applikationen/Shells
+Group(pl):	Aplikacje/Pow³oki
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/shells/%{name}-%{version}.tar.gz
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-opt.patch
