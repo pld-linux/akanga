@@ -1,6 +1,5 @@
-diff -ur akanga-1.0.5.orig/src/Makefile akanga-1.0.5/src/Makefile
---- akanga-1.0.5.orig/src/Makefile	Sat May 15 06:46:26 1999
-+++ akanga-1.0.5/src/Makefile	Mon Nov  1 18:41:33 1999
+--- src/Makefile.org	Sat Aug  7 12:35:13 1999
++++ src/Makefile	Thu Feb 24 12:57:48 2000
 @@ -21,7 +21,7 @@
  # Use an ANSI compiler (or at least one that groks prototypes and void *):
  CC=gcc
@@ -10,15 +9,3 @@ diff -ur akanga-1.0.5.orig/src/Makefile akanga-1.0.5/src/Makefile
  LDFLAGS = libedit.a
  
  # You may substitute "bison -y" for yacc. (You want to choose the one that
-diff -ur akanga-1.0.5.orig/src/editline/Makefile akanga-1.0.5/src/editline/Makefile
---- akanga-1.0.5.orig/src/editline/Makefile	Mon Nov  1 18:40:36 1999
-+++ akanga-1.0.5/src/editline/Makefile	Mon Nov  1 18:41:49 1999
-@@ -22,7 +22,7 @@
- 	-Wunused -Wcomment -Wswitch
- CC	= gcc -ansi -ggdb $(WARN)
- #CC	= cc
--CFLAGS	= $(DEFS) -O2 -m486 -fomit-frame-pointer 
-+CFLAGS	= $(DEFS) $(RPM_OPT_FLAGS)
- 
- ##  If you have -DUSE_TERMCAP, set this as appropriate:
- #LDFLAGS = -ltermlib
