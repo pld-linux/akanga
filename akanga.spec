@@ -9,7 +9,7 @@ Group(pl):	Pow³oki
 Source:		ftp://metalab.unc.edu/pub/Linux/system/shells/%{name}-%{version}.tar.gz
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-opt.patch
-Buildroot: /tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define	_prefix	/
 %define	_mandir	/usr/share/man
