@@ -14,7 +14,7 @@
  CC	= gcc -ansi -ggdb $(WARN)
  #CC	= cc
 -CFLAGS	= $(DEFS) -O2 -m486 -fomit-frame-pointer 
-+CFLAGS	= $(DEFS) $(RPM_OPT_FLAGS) -O2 -fomit-frame-pointer 
++CFLAGS	= $(DEFS) $(OPTFLAGS)
  
  ##  If you have -DUSE_TERMCAP, set this as appropriate:
  #LDFLAGS = -ltermlib
