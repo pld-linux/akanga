@@ -27,7 +27,7 @@ Prosta pow³oka z blokowaniem plików, plikami tymczasowymi i wyra¿eniami.
 %patch1 -p0
 
 %build
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
