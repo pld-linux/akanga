@@ -1,14 +1,12 @@
 Summary:	Akanga shell
 Summary(pl):	Akanga shell
 Name:		akanga
-Version:	1.0.5
+Version:	1.0.7
 Release:	1
 Copyright:	GPL
 Group:		Shells
 Group(pl):	Pow³oki
-#site:
-#path:
-Source:		%{name}-%{version}.tar.gz
+Source:		ftp://metalab.unc.edu/pub/Linux/system/shells/%{name}-%{version}.tar.gz
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-opt.patch
 Buildroot: /tmp/%{name}-%{version}-root
@@ -25,8 +23,8 @@ Prosta pow³oka z blokowaniem plików, plikami tymczasowymi i wyra¿eniami.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+%patch0 -p0
+%patch1 -p0
 
 %build
 make
