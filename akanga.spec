@@ -37,7 +37,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 gzip -9nf src/*.1 samples/*.1 src/{CHANGES,EXAMPLES,FAQ,README*}
 
-install -s bin/akanga $RPM_BUILD_ROOT%{_bindir}
+install bin/akanga $RPM_BUILD_ROOT%{_bindir}
 
 install src/*.1.gz $RPM_BUILD_ROOT%{_mandir}/man1/
 install samples/*.1.gz $RPM_BUILD_ROOT%{_mandir}/man1
