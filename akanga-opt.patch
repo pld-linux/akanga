@@ -1,11 +1,11 @@
---- src/Makefile.org	Sat Aug  7 12:35:13 1999
-+++ src/Makefile	Thu Feb 24 12:57:48 2000
-@@ -21,7 +21,7 @@
- # Use an ANSI compiler (or at least one that groks prototypes and void *):
- CC=gcc
+--- src/Makefile.orig	2004-04-09 13:14:17.000000000 +0200
++++ src/Makefile	2005-01-08 15:49:37.000000000 +0100
+@@ -23,7 +23,7 @@
  ##CFLAGS=-ggdb -DWITH_LOCKING -DWITH_TMPFILE -DWITH_VARSUP -O2 -m486 -fomit-frame-pointer -DSYSVR4
--CFLAGS = -ggdb -DWITH_LOCKING -DWITH_TMPFILE -DWITH_VARSUP -DWITH_EXPR -DWITH_MISC -O2 -m486 -DSYSVR4
-+CFLAGS = -ggdb -DWITH_LOCKING -DWITH_TMPFILE -DWITH_VARSUP -DWITH_EXPR -DWITH_MISC -DSYSVR4 $(OPTFLAGS)
- LDFLAGS = libedit.a
+ CFLAGS = -ggdb -DWITH_LOCKING -DWITH_TMPFILE -DWITH_VARSUP \
+ 		-DWITH_EXPR -DWITH_PARENVAR -DWITH_MISC \
+-		-O2 -m486 -DSYSVR4 -D'VERSION="$(VERSION)"'
++		-DSYSVR4 $(OPTFLAGS) -D'VERSION="$(VERSION)"'
  
- # You may substitute "bison -y" for yacc. (You want to choose the one that
+ ##LDFLAGS = libedit.a
+ 
