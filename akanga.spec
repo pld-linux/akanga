@@ -10,6 +10,7 @@ Source0:	ftp://metalab.unc.edu/pub/Linux/system/shells/%{name}-%{version}.tar.gz
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-opt.patch
 Patch2:		%{name}-va_copy.patch
+BuildRequires:	bison
 BuildRequires:	ctags
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
