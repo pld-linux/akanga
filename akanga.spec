@@ -18,8 +18,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Rc based shell with additions for file locking, temporary files,
 reading standard input, expr and let builtin.
 
-description -l pl Prosta pow³oka z blokowaniem plików, plikami
-tymczasowymi i wyra¿eniami.
+%description -l pl 
+Prosta pow³oka z blokowaniem plików, plikami tymczasowymi i wyra¿eniami.
 
 %prep
 %setup -q
