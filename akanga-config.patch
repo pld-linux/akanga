@@ -1,0 +1,12 @@
+diff -Nur akanga-1.0.5.org/src/editline/Makefile akanga-1.0.5/src/editline/Makefile
+--- akanga-1.0.5.org/src/editline/Makefile	Fri May 14 09:39:59 1999
++++ akanga-1.0.5/src/editline/Makefile	Fri Jul 30 11:51:14 1999
+@@ -15,7 +15,7 @@
+ ##	-DUSE_TERMCAP		Use the termcap library for terminal size
+ ##				see LDFLAGS, below, if you set this.
+ ##	-DNEED_PERROR		Don't have perror() (used in testit)
+-DEFS	= -DANSI_ARROWS -DHAVE_TCGETATTR -DHIDE -DUSE_DIRENT -DSYS_UNIX -DUNIQUE_HISTORY -DHIDE #-DUSE_TERMCAP
++DEFS	= -DANSI_ARROWS -DHAVE_TCGETATTR -DHIDE -DUSE_DIRENT -DSYS_UNIX -DUNIQUE_HISTORY -DHIST_SIZE=200 -DHAVE_STDLIB
+ 
+ ##  Set your C compiler:
+ WARN	= -Wall -Wshadow -Wpointer-arith -Wcast-qual -Wwrite-strings \
