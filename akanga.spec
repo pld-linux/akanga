@@ -1,14 +1,15 @@
-Summary:	Akanga shell
+Summary:		Akanga shell
 Summary(pl):	Akanga shell
-Name:		akanga
-Version:	1.0.7
-Release:	1
-License:	GPL
-Group:		Applications/Shells
-Source0:	ftp://metalab.unc.edu/pub/Linux/system/shells/%{name}-%{version}.tar.gz
-Patch0:		%{name}-config.patch
-Patch1:		%{name}-opt.patch
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Name:			akanga
+Version:		1.0.7
+Release:		1
+License:		GPL
+Group:			Applications/Shells
+Source0:		ftp://metalab.unc.edu/pub/Linux/system/shells/%{name}-%{version}.tar.gz
+Patch0:			%{name}-config.patch
+Patch1:			%{name}-opt.patch
+BuildRequires:	ctags
+BuildRoot:		%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_bindir		/bin
 
