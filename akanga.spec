@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		Applications/Shells
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/shells/%{name}-%{version}.tar.gz
+# Source0-md5:	591a202a5097d79a43a155ffc2fbb3b5
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-opt.patch
 Patch2:		%{name}-va_copy.patch
