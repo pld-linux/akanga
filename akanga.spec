@@ -3,10 +3,10 @@ Summary(pl):	Akanga shell
 Name:		akanga
 Version:	1.0.7
 Release:	1
-Copyright:	GPL
+License:	GPL
 Group:		Shells
 Group(pl):	Pow³oki
-Source:		ftp://metalab.unc.edu/pub/Linux/system/shells/%{name}-%{version}.tar.gz
+Source0:	ftp://metalab.unc.edu/pub/Linux/system/shells/%{name}-%{version}.tar.gz
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-opt.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -15,11 +15,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define	_mandir	/usr/share/man
 
 %description
-Rc based shell with additions for file locking, temporary files, reading standard input, 
-expr and let builtin.
+Rc based shell with additions for file locking, temporary files,
+reading standard input, expr and let builtin.
 
-description -l pl
-Prosta pow³oka z blokowaniem plików, plikami tymczasowymi i wyra¿eniami.
+description -l pl Prosta pow³oka z blokowaniem plików, plikami
+tymczasowymi i wyra¿eniami.
 
 %prep
 %setup -q
@@ -44,7 +44,7 @@ install samples/*.1.gz $RPM_BUILD_ROOT%{_mandir}/man1
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(644, root, root, 755)
+%defattr(644,root,root,755)
 %doc src/{CHANGES,EXAMPLES,FAQ,README*}.gz samples/{fileuser,lp,man2html,man2html.cgi,mancc,netuser,which}
 %attr(755,root,root) %{_bindir}/akanga
 %attr(644,root,root) %{_mandir}/man1/*.gz
