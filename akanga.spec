@@ -8,6 +8,7 @@ Group:			Applications/Shells
 Source0:		ftp://metalab.unc.edu/pub/Linux/system/shells/%{name}-%{version}.tar.gz
 Patch0:			%{name}-config.patch
 Patch1:			%{name}-opt.patch
+Patch2:			%{name}-va_copy.patch
 BuildRequires:	ctags
 BuildRoot:		%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -25,6 +26,7 @@ wyra¿eniami.
 %setup -q
 %patch0 -p0
 %patch1 -p0
+%patch2 -p1
 
 %build
 %{__make}
