@@ -1,0 +1,53 @@
+--- akanga-1.0.7/src/print.c.orig	Sat Aug  7 11:25:41 1999
++++ akanga-1.0.7/src/print.c	Sun Oct 27 20:10:43 2002
+@@ -92,7 +92,7 @@
+ 	if (flags & FMT_long)
+ 		n = va_arg(format->args, long);
+ 	else if (flags & FMT_short)
+-		n = va_arg(format->args, short);
++		n = (short)va_arg(format->args, int);
+ 	else
+ 		n = va_arg(format->args, int);
+ 
+@@ -273,11 +273,11 @@
+ 	va_list ap, saveargs;
+ 
+ 	va_start(ap, fmt);
+-	saveargs = format->args;
+-	format->args = ap;
++	__va_copy(saveargs, format->args);
++	__va_copy(format->args, ap);
+ 	n += printfmt(format, fmt);
+ 	va_end(format->args);
+-	format->args = saveargs;
++	__va_copy(format->args, saveargs);
+ 
+ 	return n + format->flushed;
+ }
+@@ -304,7 +304,7 @@
+ 	format.u.n	= fd;
+ 
+ 	va_start(ap, fmt);
+-	format.args = ap;
++	__va_copy(format.args, ap);
+ 	printfmt(&format, fmt);
+ 	va_end(format.args);
+ 
+@@ -348,7 +348,7 @@
+ 
+ 	format.u.n = 1;
+ 	va_start(ap, fmt);
+-	format.args = ap;
++	__va_copy(format.args, ap);
+ 	result = memprint(&format, fmt, ealloc(PRINT_ALLOCSIZE), PRINT_ALLOCSIZE);
+ 	va_end(format.args);
+ 	return result;
+@@ -361,7 +361,7 @@
+ 
+ 	format.u.n = 0;
+ 	va_start(ap, fmt);
+-	format.args = ap;
++	__va_copy(format.args, ap);
+ 	result = memprint(&format, fmt, nalloc(PRINT_ALLOCSIZE), PRINT_ALLOCSIZE);
+ 	va_end(format.args);
+ 	return result;
