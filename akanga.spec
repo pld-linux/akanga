@@ -1,5 +1,5 @@
 Summary:	Akanga shell
-Summary(pl.UTF-8):   Powłoka Akanga
+Summary(pl.UTF-8):	Powłoka Akanga
 Name:		akanga
 Version:	1.0.21
 Release:	1
