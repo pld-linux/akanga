@@ -1,5 +1,5 @@
 Summary:	Akanga shell
-Summary(pl):	Pow≥oka Akanga
+Summary(pl.UTF-8):   Pow≈Çoka Akanga
 Name:		akanga
 Version:	1.0.21
 Release:	1
@@ -20,9 +20,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Rc based shell with additions for file locking, temporary files,
 reading standard input, expr and let builtin.
 
-%description -l pl
-Prosta pow≥oka z dodatkami do blokowania plikÛw, plikÛw tymczasowych,
-czytania standardowego wej∂cia oraz wbudowanymi expr i let.
+%description -l pl.UTF-8
+Prosta pow≈Çoka z dodatkami do blokowania plik√≥w, plik√≥w tymczasowych,
+czytania standardowego wej≈õcia oraz wbudowanymi expr i let.
 
 %prep
 %setup -q
